@@ -1,8 +1,20 @@
+import { BusinessCard } from "../components";
+
+const businesses = [
+  { id: 1, name: 'Local Bakery', description: 'Fresh bread and pastries daily.', category: 'Food' },
+  { id: 2, name: 'Gym Center', description: 'Stay fit with our state-of-the-art equipment.', category: 'Fitness' },
+  // Add more businesses here...
+];
+
 const BusinessDirectory = () => {
   return (
-    <div>
-      <h1>Business Directory</h1>
-      {/* Implement business listing here */}
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-4">Business Directory</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {businesses.map((business) => (
+          <BusinessCard key={business.id} business={business} />
+        ))}
+      </div>
     </div>
   );
 };
