@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="bg-blue-600 p-4 text-white fixed w-full z-10">
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold">LocalLink</Link>
+        <Link to="/" className="text-2xl font-bold">Mwenyeji</Link>
         <button
           className="block sm:hidden text-3xl"
           onClick={toggleMenu}
