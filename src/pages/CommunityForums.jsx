@@ -1,8 +1,9 @@
 const CommunityForums = () => {
   return (
-    <div>
-      <h1>Community Forums</h1>
-      {/* Implement forums here */}
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-4">Community Forums</h1>
+      <p>Join the conversation and connect with your neighbors.</p>
+      {/* Implement forums functionality here */}
     </div>
   );
 };
