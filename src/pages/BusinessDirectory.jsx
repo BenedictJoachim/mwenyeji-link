@@ -1,8 +1,24 @@
 import { BusinessCard } from "../components";
 
 const businesses = [
-  { id: 1, name: 'Local Bakery', description: 'Fresh bread and pastries daily.', category: 'Food' },
-  { id: 2, name: 'Gym Center', description: 'Stay fit with our state-of-the-art equipment.', category: 'Fitness' },
+  { 
+    id: 1, 
+    name: 'Local Bakery', 
+    description: 'Fresh bread and pastries daily.', 
+    category: 'Food', 
+    location: 'Uhuru Street', 
+    image: '/images/barkery-local.jpg', 
+    video: '/videos/bakery.mp4' 
+  },
+  { 
+    id: 2, 
+    name: 'Gym Center', 
+    description: 'Stay fit with our state-of-the-art equipment.', 
+    category: 'Fitness', 
+    location: 'Buzuruga', 
+    image: '/images/gym-center.jpg', 
+    video: '/videos/gym-center.mp4' 
+  },
   // Add more businesses here...
 ];
 
