@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
+import { compass, map_compass, town_map } from "../assets/images";
 
 const Home = () => {
   return (
+    <div className='relative'>
     <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
       <h1 className="text-5xl text-blue-600 font-montserrat font-bold mb-8 ml-8">You won't believe! <br /> what this location has to offer, <br /> just talk to Mwenyeji.</h1>
       <p className="text-lg text-gray-700 mb-8 mx-8">Discover local businesses and events in your community.</p>
@@ -13,6 +15,17 @@ const Home = () => {
           View Events
         </Link>
       </div>
+    </div>
+      <img 
+        src={compass} 
+        alt="compass"
+        className='absolute top-16 left-0 w-1/5' 
+      />
+      <img 
+        src={town_map} 
+        alt="town map"
+        className='absolute bottom-16 right-0 w-2/5'  
+      />
     </div>
   );
 };
