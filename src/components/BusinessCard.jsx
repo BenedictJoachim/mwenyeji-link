@@ -11,14 +11,14 @@ const BusinessCard = ({ business }) => {
           <span className="inline-block bg-blue-200 text-blue-700 px-3 py-1 text-sm font-semibold rounded-full">{business.category}</span>
           <span className="inline-block bg-green-200 text-green-700 px-3 py-1 text-sm font-semibold rounded-full">{business.location}</span>
         </div>
-        {business.video && (
+        {/* {business.video && (
           <div className="mb-2">
             <video controls className="w-full h-48 object-cover">
               <source src={business.video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
-        )}
+        )} */}
         <Link to={`/business/${business.id}`} className="text-blue-500 hover:underline">View More</Link>
       </div>
     </div>
