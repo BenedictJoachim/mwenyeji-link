@@ -16,7 +16,7 @@ const BusinessProfile = () => {
     <div className="container mx-auto p-4 mt-16">
       <div className="flex flex-col items-center md:items-baseline">
         <img src={business.image} alt={business.name} className="w-full md:h-80 object-cover rounded-lg shadow-lg mb-4 md:mb-0 md:mr-4" />
-        <div className="md:w-2/3">
+        <div className="mt-3 md:w-2/3">
           <h1 className="text-3xl font-bold mb-2">{business.name}</h1>
           <p className="text-gray-700 mb-4">{business.description}</p>
           <div className="flex space-x-2 mb-4">

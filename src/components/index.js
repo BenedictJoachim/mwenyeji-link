@@ -4,6 +4,7 @@ import BusinessCard from "./BusinessCard.jsx";
 import Promotions from "./Promotions.jsx";
 import UserReviews from "./UserReviews.jsx";
 import MapLocation from "./MapLocation.jsx";
+import ReviewForm from "./ReviewForm.jsx";
 
 export {
     Header,
@@ -12,4 +13,5 @@ export {
     Promotions,
     UserReviews,
     MapLocation,
+    ReviewForm,
 }
