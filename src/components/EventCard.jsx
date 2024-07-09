@@ -1,6 +1,6 @@
 const EventCard = ({ event }) => {
   return (
-    <div className="border rounded-lg overflow-hidden shadow-lg">
+    <div className="border rounded-lg overflow-hidden shadow-lg mt-3">
       <img src={event.image} alt={event.title} className="w-full h-48 object-cover" />
       <div className="p-4">
         <h2 className="text-2xl font-bold mb-2">{event.title}</h2>
