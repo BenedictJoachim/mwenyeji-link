@@ -28,21 +28,25 @@ const BusinessDirectory = () => {
     <div className="container mx-auto p-4 mt-3">
       <h1 className="text-2xl font-bold mb-4">Business Directory</h1>
       <nav className="mb-4 flex flex-wrap justify-between items-center">
-        <div className='w-full md:w-auto mb-2 md:mb-0 overflow-x-auto whitespace-nowrap'>
-          <span className="font-semibold">Categories: </span>
-          {categories.map(category => (
-            <Link key={category} to={`#`} className="mx-2 text-blue-600 hover:underline">
-              {category}
-            </Link>
-          ))}
-        </div>
-        <div className='w-full md:w-auto mb-2 md:mb-0 overflow-x-auto whitespace-nowrap'>
-          <span className="font-semibold">Locations: </span>
+          <div className='flex py-2'>
+            <div className="font-semibold">Categories: </div>
+            <div className='w-full md:w-auto mb-2 md:mb-0 overflow-x-auto whitespace-nowrap'>
+            {categories.map(category => (
+              <Link key={category} to={`#`} className="mx-2 text-blue-600 hover:underline">
+                {category}
+              </Link>
+            ))}
+            </div>
+          </div>
+        <div className='flex w-full'>
+          <div className="font-semibold">Locations: </div>
+          <div className='md:w-auto mb-2 md:mb-0 overflow-x-auto whitespace-nowrap'>
           {locations.map(location => (
             <Link key={location} to={`#`} className="mx-2 text-blue-600 hover:underline">
               {location}
             </Link>
           ))}
+          </div>
         </div>
         <form onSubmit={handleSearchSubmit} className="flex items-center">
           <input
