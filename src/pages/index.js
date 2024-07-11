@@ -4,6 +4,8 @@ import CommunityForums from "./CommunityForums.jsx";
 import BusinessDirectory from "./BusinessDirectory.jsx";
 import BusinessProfile from "./BusinessProfile.jsx";
 import UserDashboard from "./UserDashboard.jsx";
+import Directory from "./Directory.jsx";
+import SearchPage from "./SearchPage.jsx";
 
 export {
     Home,
@@ -12,4 +14,6 @@ export {
     BusinessDirectory,
     BusinessProfile,
     UserDashboard,
+    Directory,
+    SearchPage,
 }

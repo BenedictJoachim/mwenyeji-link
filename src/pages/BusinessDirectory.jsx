@@ -1,33 +1,64 @@
-import { BusinessCard } from "../components";
-
-const businesses = [
-  { 
-    id: 1, 
-    name: 'Local Bakery', 
-    description: 'Fresh bread and pastries daily.', 
-    category: 'Food', 
-    location: 'Uhuru Street', 
-    image: '/images/barkery-local.jpg', 
-    video: '/videos/bakery.mp4' 
-  },
-  { 
-    id: 2, 
-    name: 'Gym Center', 
-    description: 'Stay fit with our state-of-the-art equipment.', 
-    category: 'Fitness', 
-    location: 'Buzuruga', 
-    image: '/images/gym-center.jpg', 
-    video: '/videos/gym-center.mp4' 
-  },
-  // Add more businesses here...
-];
+// src/pages/BusinessDirectory.jsx
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import businesses from '../data/businesses'; // Ensure this is the correct path to your businesses data
+import { BusinessCard } from '../components';
 
 const BusinessDirectory = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/search?query=${searchTerm}`);
+  };
+
+  const categories = ['All', 'Restaurants', 'Shops', 'Services', 'Entertainment']; // Example categories
+  const locations = ['All', 'Buzuruga', 'Kisesa', 'Pasiansi', 'Kiseke', 'Nyegezi']; // Example locations
+
+  const filteredBusinesses = businesses.filter(business =>
+    business.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Business Directory</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {businesses.map((business) => (
+    <div className="container mx-auto p-4 mt-3">
+      <h1 className="text-2xl font-bold mb-4">Business Directory</h1>
+      <nav className="mb-4 flex justify-between items-center">
+        <div>
+          <span className="font-semibold">Categories: </span>
+          {categories.map(category => (
+            <Link key={category} to={`#`} className="mx-2 text-blue-600 hover:underline">
+              {category}
+            </Link>
+          ))}
+        </div>
+        <div>
+          <span className="font-semibold">Locations: </span>
+          {locations.map(location => (
+            <Link key={location} to={`#`} className="mx-2 text-blue-600 hover:underline">
+              {location}
+            </Link>
+          ))}
+        </div>
+        <form onSubmit={handleSearchSubmit} className="flex items-center">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={handleSearchChange}
+            placeholder="Search Businesses..."
+            className="p-2 border rounded-lg"
+          />
+          <button type="submit" className="ml-2 p-2 bg-blue-600 text-white rounded-lg">
+            Search
+          </button>
+        </form>
+      </nav>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {filteredBusinesses.map(business => (
           <BusinessCard key={business.id} business={business} />
         ))}
       </div>

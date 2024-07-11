@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { compass, map_compass, town_map } from "../assets/images";
+import { compass, town_map } from "../assets/images";
 
 const Home = () => {
   return (

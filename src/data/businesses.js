@@ -1,4 +1,3 @@
-// src/data/businesses.js
 const businesses = [
     {
         id: 1,
@@ -25,9 +24,9 @@ const businesses = [
         id: 3,
         name: 'Nyumbani Bookshop',
         description: 'Read, Read, Read',
-        cartegory: 'Retail',
+        category: 'Retail',
         location: 'Majengo',
-        image: '/images/book-store',
+        image: '/images/book-store.jpg',
         promotions: [],
 
     }

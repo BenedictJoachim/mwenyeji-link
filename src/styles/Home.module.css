@@ -1,0 +1,41 @@
+/* src/styles/Home.module.css */
+
+.home-image {
+    position: absolute;
+    transform: scale(0.8); /* This makes the image appear smaller, giving a sense of depth */
+    z-index: -1; /* This places the image behind other elements */
+    opacity: 0.7; /* This can add to the effect of depth by making the image less prominent */
+  }
+  
+  .home-image.top-right {
+    top: 0;
+    right: 0;
+  }
+  
+  .home-image.bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .home-image.top-right,
+    .home-image.bottom-left {
+      display: none; /* Hide images on small screens */
+    }
+  }
+  
+  h1 select {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    margin-left: 10px;
+    padding: 5px;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  h1 select:focus {
+    border: 1px solid #4a90e2; /* Example focus border color */
+    outline: none;
+  }
+  
