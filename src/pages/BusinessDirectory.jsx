@@ -28,7 +28,7 @@ const BusinessDirectory = () => {
     <div className="container mx-auto p-4 mt-3">
       <h1 className="text-2xl font-bold mb-4">Business Directory</h1>
       <nav className="mb-4 flex flex-wrap justify-between items-center">
-        <div className='w-full md:w-auto mb-2 md:mb-0'>
+        <div className='w-full md:w-auto mb-2 md:mb-0 overflow-x-auto whitespace-nowrap'>
           <span className="font-semibold">Categories: </span>
           {categories.map(category => (
             <Link key={category} to={`#`} className="mx-2 text-blue-600 hover:underline">
@@ -36,7 +36,7 @@ const BusinessDirectory = () => {
             </Link>
           ))}
         </div>
-        <div className='w-full md:w-auto mb-2 md:mb-0'>
+        <div className='w-full md:w-auto mb-2 md:mb-0 overflow-x-auto whitespace-nowrap'>
           <span className="font-semibold">Locations: </span>
           {locations.map(location => (
             <Link key={location} to={`#`} className="mx-2 text-blue-600 hover:underline">
