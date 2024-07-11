@@ -17,7 +17,17 @@ const events = [
       image: '/images/book-store.jpg', 
       video: '/videos/bookstore.mp4' 
     },
-    // Add more events here...
+    {
+      id: 3,
+      title: 'Free Mapishi Class',
+      date: '2024-08-11',
+      description: 'Msosi rahisi wa kila siku kwa afya bora.',
+      category: 'Food',
+      location: 'Main Street',
+      image: '/images/barkery-local.jpg',
+      video: '/video/bakery.mp4',
+  },
+
   ];
 
   export default events

@@ -50,7 +50,7 @@ const BusinessDirectory = () => {
             value={searchTerm}
             onChange={handleSearchChange}
             placeholder="Search Businesses..."
-            className="p-2 border rounded-lg"
+            className="p-2 border rounded-lg outline-blue-100"
           />
           <button type="submit" className="ml-2 p-2 bg-blue-600 text-white rounded-lg">
             Search

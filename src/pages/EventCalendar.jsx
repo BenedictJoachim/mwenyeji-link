@@ -45,7 +45,7 @@ const EventsCalendar = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search Events..."
-            className="p-2 border rounded-lg"
+            className="p-2 border rounded-lg outline-blue-100"
           />
           <button onClick={handleSearchIconClick} className="ml-2 p-2 bg-blue-600 text-white rounded-lg">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
