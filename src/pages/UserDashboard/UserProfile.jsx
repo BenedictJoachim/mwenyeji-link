@@ -11,7 +11,7 @@ const UserProfile = () => {
     <div className="bg-white p-6 rounded-lg shadow-lg flex items-center">
       <div className="mr-4">
         <img
-          src="/assets/images/user-avatar.png"
+          src="/images/user-avatar.jpg"
           alt="User Avatar"
           className="w-16 h-16 rounded-full"
         />

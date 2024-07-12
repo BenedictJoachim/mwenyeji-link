@@ -2,9 +2,9 @@ import React from 'react';
 
 const FavoriteBusinesses = () => {
   const businesses = [
-    { id: 1, name: 'Business One', category: 'Restaurant', image: '/assets/images/business1.jpg' },
-    { id: 2, name: 'Business Two', category: 'Cafe', image: '/assets/images/business2.jpg' },
-    { id: 3, name: 'Business Three', category: 'Store', image: '/assets/images/business3.jpg' },
+    { id: 1, name: 'Business One', category: 'Restaurant', image: '/images/restaurant.jpg' },
+    { id: 2, name: 'Business Two', category: 'Cafe', image: '/images/cafe.jpg' },
+    { id: 3, name: 'Business Three', category: 'Store', image: '/images/store.jpg' },
   ];
 
   return (

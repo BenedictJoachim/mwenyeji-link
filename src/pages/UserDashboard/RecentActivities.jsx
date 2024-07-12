@@ -16,7 +16,7 @@ const RecentActivities = () => {
             <div className="flex items-center">
               <div className="mr-4">
                 <img
-                  src="/assets/images/activity-icon.png"
+                  src="/images/activity-icon.png"
                   alt="Activity Icon"
                   className="w-8 h-8"
                 />

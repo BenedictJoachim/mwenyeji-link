@@ -2,9 +2,9 @@ import React from 'react';
 
 const UpcomingEvents = () => {
   const events = [
-    { id: 1, name: 'Event One', date: '2024-08-01', image: '/assets/images/event1.jpg' },
-    { id: 2, name: 'Event Two', date: '2024-08-15', image: '/assets/images/event2.jpg' },
-    { id: 3, name: 'Event Three', date: '2024-09-01', image: '/assets/images/event3.jpg' },
+    { id: 1, name: 'Event One', date: '2024-08-01', image: '/images/barkery-local.jpg' },
+    { id: 2, name: 'Event Two', date: '2024-08-15', image: '/images/cafe.jpg' },
+    { id: 3, name: 'Event Three', date: '2024-09-01', image: '/images/farmers-market.jpg' },
   ];
 
   return (
