@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-blue-600 p-4 text-white fixed w-full z-10 shadow-lg shadow-blue-500/50">
+    <header className="bg-blue-600 p-4 text-white fixed w-full z-10 shadow-lg">
       <div className="container mx-auto flex justify-between items-center ">
         <Link to="/" className="text-2xl font-bold">Mwenyeji</Link>
         <button
