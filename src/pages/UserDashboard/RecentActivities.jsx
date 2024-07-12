@@ -1,3 +1,5 @@
+import React from 'react';
+
 const RecentActivities = () => {
   const activities = [
     { id: 1, activity: 'Reviewed Business One', date: '2024-07-01' },
@@ -6,12 +8,24 @@ const RecentActivities = () => {
   ];
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-lg mb-4">
+    <div className="bg-white p-6 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-4">Recent Activities</h2>
       <ul>
         {activities.map(activity => (
           <li key={activity.id} className="mb-2">
-            <strong>{activity.activity}</strong> - {activity.date}
+            <div className="flex items-center">
+              <div className="mr-4">
+                <img
+                  src="/assets/images/activity-icon.png"
+                  alt="Activity Icon"
+                  className="w-8 h-8"
+                />
+              </div>
+              <div>
+                <p className="text-gray-700">{activity.activity}</p>
+                <p className="text-gray-500 text-sm">{activity.date}</p>
+              </div>
+            </div>
           </li>
         ))}
       </ul>

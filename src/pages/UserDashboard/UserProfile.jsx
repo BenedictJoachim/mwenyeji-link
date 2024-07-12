@@ -1,7 +1,6 @@
 import React from 'react';
 
 const UserProfile = () => {
-  // Dummy user data
   const user = {
     name: 'John Doe',
     email: 'john.doe@example.com',
@@ -9,11 +8,19 @@ const UserProfile = () => {
   };
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-4">User Profile</h2>
-      <p className="mb-2"><strong>Name:</strong> {user.name}</p>
-      <p className="mb-2"><strong>Email:</strong> {user.email}</p>
-      <p className="mb-2"><strong>Joined:</strong> {user.joined}</p>
+    <div className="bg-white p-6 rounded-lg shadow-lg flex items-center">
+      <div className="mr-4">
+        <img
+          src="/assets/images/user-avatar.png"
+          alt="User Avatar"
+          className="w-16 h-16 rounded-full"
+        />
+      </div>
+      <div>
+        <h2 className="text-xl font-bold mb-1">{user.name}</h2>
+        <p className="text-gray-700 mb-1"><strong>Email:</strong> {user.email}</p>
+        <p className="text-gray-700"><strong>Joined:</strong> {user.joined}</p>
+      </div>
     </div>
   );
 };

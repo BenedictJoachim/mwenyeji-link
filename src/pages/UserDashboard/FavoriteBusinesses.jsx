@@ -1,23 +1,30 @@
 import React from 'react';
 
 const FavoriteBusinesses = () => {
-  // Dummy data
   const businesses = [
-    { id: 1, name: 'Business One', category: 'Restaurant' },
-    { id: 2, name: 'Business Two', category: 'Cafe' },
-    { id: 3, name: 'Business Three', category: 'Store' },
+    { id: 1, name: 'Business One', category: 'Restaurant', image: '/assets/images/business1.jpg' },
+    { id: 2, name: 'Business Two', category: 'Cafe', image: '/assets/images/business2.jpg' },
+    { id: 3, name: 'Business Three', category: 'Store', image: '/assets/images/business3.jpg' },
   ];
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-lg mb-4">
+    <div className="bg-white p-6 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-4">Favorite Businesses</h2>
-      <ul>
+      <div className="space-y-4">
         {businesses.map(business => (
-          <li key={business.id} className="mb-2">
-            <strong>{business.name}</strong> - {business.category}
-          </li>
+          <div key={business.id} className="flex items-center">
+            <img
+              src={business.image}
+              alt={business.name}
+              className="w-16 h-16 rounded-lg mr-4"
+            />
+            <div>
+              <h3 className="text-xl font-bold">{business.name}</h3>
+              <p className="text-gray-700">{business.category}</p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
