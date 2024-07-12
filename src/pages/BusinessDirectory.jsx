@@ -48,19 +48,24 @@ const BusinessDirectory = () => {
               ))}
           </div>
         </div>
-        <form onSubmit={handleSearchSubmit} className="flex items-center">
+      </nav>
+      <div className="flex justify-center mb-4">
+          <div className='flex items-center px-2 py-2 w-full md:w-1/2 lg:w-1/3 shadow-lg shadow-inner rounded-full'>
           <input
             type="text"
             value={searchTerm}
             onChange={handleSearchChange}
-            placeholder="Search Businesses..."
-            className="p-2 border rounded-lg outline-blue-100"
+            placeholder="Search Events..."
+            className="grow p-2 outline-0"
           />
-          <button type="submit" className="ml-2 p-2 bg-blue-600 text-white rounded-lg">
-            Search
+          <button onClick={handleSearchSubmit} className="ml-2 p-2 text-blue-300 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M16.65 16.65A7.5 7.5 0 1110.5 3.5a7.5 7.5 0 016.15 13.15z" />
+            </svg>
           </button>
-        </form>
-      </nav>
+          </div>
+        </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredBusinesses.map(business => (
           <BusinessCard key={business.id} business={business} />
