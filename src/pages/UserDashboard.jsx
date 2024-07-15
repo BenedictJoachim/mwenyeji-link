@@ -1,5 +1,8 @@
 import {useState} from 'react';
-import { UserProfile, FavoriteBusinesses, UpcomingEvents, RecentActivities } from './UserDashboard'
+import UserProfile from './UserDashboard/UserProfile';
+import FavoriteBusinesses from './UserDashboard/FavoriteBusinesses';
+import UpcomingEvents from './UserDashboard/UpcomingEvents';
+import RecentActivities from './UserDashboard/RecentActivities';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 const UserDashboard = () => {

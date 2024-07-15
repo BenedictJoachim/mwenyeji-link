@@ -6,6 +6,7 @@ import BusinessProfile from "./BusinessProfile.jsx";
 import UserDashboard from "./UserDashboard.jsx";
 import Directory from "./Directory.jsx";
 import SearchPage from "./SearchPage.jsx";
+import NewThread from "./NewThread.jsx";
 
 export {
     Home,
@@ -16,4 +17,5 @@ export {
     UserDashboard,
     Directory,
     SearchPage,
+    NewThread,
 }
